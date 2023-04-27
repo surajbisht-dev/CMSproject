@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Explora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <%-include('../partials/header.ejs')%>
+        <%record.forEach((result)=>{%>
+            <section id="banner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h2 class="text-uppercase">
+                                <%=result.firstName%>
+                                    <%=result.lastName%>
+                            </h2>
+                            <p>
+                                <%=result.aboutus%>
+                            </p>
+                            <a href="/profiledetails/<%=result.id%>"> <button>More Details...</button></a>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="/upload/<%=result.img%>" alt="" id="banner-img" class="img-fluid d-block mx-auto ">
+                        </div>
+                    </div>
+                </div>
+                <!-- <img src="/media/border1.png" alt="" id="border1"> -->
+            </section>
+            <%})%>
+                <section id="services">
+                    <div class="container">
+                        <h2>Services</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="/media/instagram-icon.png" alt="">
+                                <h4>Service 1</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nostrum amet explicabo omnis nisi iste quas accusamus quae neque ea, tempore quod possimus cum qui error labore libero, corporis optio.</p>
+                                <button class="btn btn-success">more details</button>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="/media/instagram-icon.png" alt="">
+                                <h4>Service 2</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nostrum amet explicabo omnis nisi iste quas accusamus quae neque ea, tempore quod possimus cum qui error labore libero, corporis optio.</p>
+                                <button class="btn btn-success">more details</button>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="/media/instagram-icon.png" alt="">
+                                <h4>Service 3</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nostrum amet explicabo omnis nisi iste quas accusamus quae neque ea, tempore quod possimus cum qui error labore libero, corporis optio.</p>
+                                <button class="btn btn-success">more details</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="testi">
+                    <div class="container">
+                        <h2>Testinominals</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="/media/building.png" alt="">
+                                <p><span>
+                        <i class="bi bi-quote"></i>
+                    </span> ipsum dolor sit amet consectetur adipisicing elit. Eos aspernatur architecto ipsam accusamus vero quos et expedita optio fugiat. Cupiditate, debitis dolores. Illo ipsam nostrum, minus molestiae ducimus ipsum ab?Lorem ipsum
+                                    dolor sit amet consectetur, adipisicing elit. Explicabo quaerat dignissimos similique quae, corporis consectetur a magni provident officia obcaecati, quia adipisci. Possimus officia
+                                    <span>
+                        <i class="bi bi-quote"></i>
+                    </span>
+                                </p>
+                                <span>Amazon India</span>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="/media/building.png" alt="">
+                                <p><span>
+                        <i class="bi bi-quote"></i>
+                    </span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam maiores laudantium omnis maxime dolorem explicabo optio iste architecto voluptatibus voluptate? Omnis, vel laborum a nihil beatae obcaecati vero accusamus dolorum
+                                    eum illo maiores eaque dignissimos aliquid facilis asperiores incidunt rem ducimus quo? Maiores eveniet non animi magni iste quis aspernatur.lorem jfjw jfwuy ewttge
+                                    <span>
+                            <i class="bi bi-quote"></i>
+                        </span>
+                                </p>
+                                <span>IBM India Pvt Ltd</span>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="/media/building.png" alt="">
+                                <p><span>
+                        <i class="bi bi-quote"></i>
+                    </span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum animi neque est eius tempore laudantium, ea quo, provident odit temporibus accusantium obcaecati, tempora illum voluptatem labore rem recusandae exercitationem
+                                    rerum. Perspiciatis saepe facere impedit sapiente illo, nisi ducimus deserunt nostrum odit ullam eveniet nihil iste, praesentium, temporibus harum exercitationem. Earum?<span>
+                            <i class="bi bi-quote"></i>
+                        </span>
+                                </p>
+                                <span>Microsoft India</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                <%-include('../partials/footer.ejs')%>
+
+
+
+
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+                    <!-- https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js -->
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+
+</html>
